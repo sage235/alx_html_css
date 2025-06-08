@@ -1,1 +1,41 @@
-/* You can add your custom styles here */
+/* Positioning with Flexbox */
+
+/* body = flex container in column direction */
+body {
+  display: flex;
+  flex-direction: column; /* stack header, main, footer vertically */
+  height: 100vh;          /* take full height of the viewport */
+  margin: 0;
+}
+
+/* main = flex container in row direction */
+main {
+  display: flex;
+  flex-direction: row;    /* place article and aside side by side */
+  flex: auto;             /* automatic sizing */
+  height: auto;
+  flex-grow: 1;           /* grow to fill available space */
+}
+
+/* article = takes 2/3 of the width */
+article {
+  flex: 2;                /* takes 2 parts */
+  overflow-y: auto;       /* enable vertical scroll if needed */
+  padding: 10px;
+  border: 1px solid #ccc; /* optional visual border */
+}
+
+/* aside = takes 1/3 of the width */
+aside {
+  flex: 1;                /* takes 1 part */
+  overflow-y: auto;       /* enable vertical scroll if needed */
+  padding: 10px;
+  border: 1px solid #ccc; /* optional visual border */
+}
+
+/* header and footer at top and bottom */
+header, footer {
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
